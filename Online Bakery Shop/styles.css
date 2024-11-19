@@ -1,0 +1,131 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f4ef;
+    color: #333;
+  }
+  
+  .header {
+    background-color: #ffb347;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .items-container, .cart-container {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1000px; /* Adjust as per your layout */
+  }
+  
+  .items-container h2, .cart-container h2 {
+    color: #ff6f61;
+  }
+  
+  .items {
+    display: flex; /* Flexbox layout */
+    flex-wrap: nowrap; /* No wrapping, all items in one line */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    gap: 1.5rem; /* Space between items */
+  }
+  
+  .items::-webkit-scrollbar {
+    height: 8px; /* Customize scrollbar size */
+  }
+  
+  .items::-webkit-scrollbar-thumb {
+    background-color: #ff6f61; /* Scrollbar color */
+    border-radius: 4px;
+  }
+  
+  .item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    width: 200px; /* Fixed width for each item */
+  }
+  
+  .item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .item h3 {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .item p {
+    margin: 0.2rem 0;
+    color: #666;
+  }
+  
+  .item button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #ff6f61;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .item button:hover {
+    background-color: #e85a4f;
+  }
+  
+  .cart-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-container div {
+    margin-bottom: 0.5rem;
+  }
+  
+  .cart-container button {
+    padding: 0.5rem;
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cart-container button:hover {
+    background-color: #e85a4f;
+  }
+  
+  .checkout-btn {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: #ffb347;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #ff9933;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffb347;
+    color: white;
+  }
