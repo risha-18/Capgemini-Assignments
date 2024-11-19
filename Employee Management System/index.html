@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Employee Management System</h1>
+    </header>
+
+    <section class="form-container">
+        <h2>Add Employee</h2>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="id" placeholder="Employee ID" required>
+        <input type="text" id="skill" placeholder="Skill" required>
+        <input type="date" id="doj" required>
+        <input type="text" id="department" placeholder="Department" required>
+        <input type="file" id="image" placeholder="Employee Image" accept="image/*">
+        <button onclick="addEmployee()">Add Employee</button>
+    </section>
+
+    <section class="form-container">
+        <h2>Remove Employee</h2>
+        <input type="number" id="removeId" placeholder="Employee ID" required>
+        <button onclick="removeEmployee()">Remove Employee</button>
+    </section>
+
+    <section class="form-container">
+        <h2>Search Employee</h2>
+        <input type="number" id="searchId" placeholder="Employee ID" required>
+        <button onclick="searchEmployee()">Search Employee</button>
+    </section>
+
+    <section id="employeeList">
+        <h2>Employee Directory</h2>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Skill</th>
+                    <th>Department</th>
+                    <th>Experience</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic Employee rows will be added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="output"></section>
+
+    <script src="script1.js"></script>
+</body>
+
+</html>
