@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Admin Dashboard</h2>
+  <form method="POST" action="/admin/register-product">
+    <h3>Register Product</h3>
+    <label>Product Name: <input type="text" name="productName" required></label><br>
+    <label>Product ID: <input type="text" name="productId" required></label><br>
+    <label>Price: <input type="text" name="price" required></label><br>
+    <label>Category: <input type="text" name="category" required></label><br>
+    <label>Manufacturing Date: <input type="date" name="mfgDate" required></label><br>
+    <label>Expiration Date: <input type="date" name="expDate" required></label><br>
+    <button type="submit">Register Product</button>
+  </form>
+  <h3>Product List</h3>
+  <button onclick="loadProducts()">Load Products</button>
+  <ul id="product-list"></ul>
+  <script>
+    function loadProducts() {
+      fetch('/admin/products')
+        .then((res) => res.json())
+        .then((products) => {
+          const productList = document.getElementById('product-list');
+          productList.innerHTML = products
+            .map(
+              (product) =>
+                `<li>${product.productName} - ${product.category} - ${product.price}</li>`
+            )
+            .join('');
+        });
+    }
+  </script>
+  <a href="/logout">Logout</a>
+</body>
+</html>
